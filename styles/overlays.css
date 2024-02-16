@@ -1,0 +1,32 @@
+.modal {
+  position: fixed; /* fixed means that position is not changed even if there is a scrolling */
+  top: 20%; /* 20% down the screen*/
+  left: 5%;
+  width: 90%; /*good for mobile*/
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: none; /*not visible at once. Should be visible by JS */
+}
+
+/* This is to mask background*/
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /*dark background id not visible*/
+}
+
+/*If the screen is smaller*/
+@media (min-width: 48rem) {
+  .modal {
+    left: calc(
+      50%-20rem
+    ); /*calculate position and 20rem, because we want 40 rem width*/
+    width: 40rem;
+  }
+}
