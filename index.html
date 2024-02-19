@@ -10,13 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/overlays.css">
-    <link rel="stylesheet" href="styles/configuration.css">
-    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/overlays.css" />
+    <link rel="stylesheet" href="styles/configuration.css" />
+    <link rel="stylesheet" href="styles/game.css" />
   </head>
   <body>
-    <div id="backdrop"></div> <!--This is an element to hide the background while displaying overlays. This is only for styling purposes-->
+    <div id="backdrop"></div>
+    <!--This is an element to hide the background while displaying overlays. This is only for styling purposes-->
     <header id="main-header">
       <h1>Play Tic, Tac, Toe</h1>
       <p>Built with HTML, CSS, JS and Love</p>
@@ -31,7 +32,7 @@
             <input type="text" name="username" id="playername" />
           </div>
           <div>
-            <button type="button" class="btn btn-alt">Cancel</button>
+            <button type="button" class="btn btn-alt" id="edit-player-1-btn">Cancel</button>
             <!-- type button is used if NOT submitting form -->
             <button type="submit" class="btn">Confirm</button>
           </div>
@@ -44,7 +45,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player-2-btn">Edit</button>
             </article>
           </li>
           <li>
@@ -54,7 +55,7 @@
               <p class="player-symbol">O</p>
               <button class="btn btn-alt">Edit</button>
             </article>
-          </li> 
+          </li>
         </ol>
         <button class="btn">Start New Game</button>
       </section>
@@ -69,17 +70,17 @@
         </article>
 
         <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
-        <ol>
+        <ol id="game-board">
           <!--This is game fields. In fact, this is just an ordered list-->
+          <li class="disabled">X</li>
           <li></li>
-          <li></li>
-          <li></li>
+          <li class="disabled">O</li>
 
           <li></li>
-          <li></li>
+          <li class="disabled">X</li>
           <li></li>
 
-          <li></li>
+          <li class="disabled">O</li>
           <li></li>
           <li></li>
         </ol>
